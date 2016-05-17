@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- This meta tags makes sure accents and other special caracters are displayed correctly -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- 
+    We reference boostrap stylesheets. Notice that we reference the "online" version, the 
+    one in ther content distribution network. If you download bootstrap, then you shoul reference
+    the one in your local system
+     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 
+     You can also override some of the styles that come by default, or create new ones. These extensions
+     should go in a separate files to make sure we don't lose them if we update the boostrap version in the future.
+     Note: Boostrap also offers the "source code" in *less* to facilitate extensions, but that's outsite the 
+     scope of this course.
+     -->
+    <link rel="stylesheet" href="styles.css">        
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- this is for the header, the logo usually goes here -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            Project name
+          </a>
+        </div>
+      </div>
+    </nav>    
+    
+    <!-- This is the main container of the entire page -->
+    <div class="container">
+
+      <form>
+        <!-- 
+             if you try using form-inline you won't get the desired output. 
+             you'll see not only the form-groups, but all the elements inline.
+             here I go for the standard layout classes.
+        -->
+        <div class="row">
+          <div class="col-md-2">
+            <div class="form-group">
+              <!-- 
+                    'for' is used to link the label with the input element.
+                    if you click on the label, you'll see that the input gets
+                    the focus.
+               -->                          
+              <label for="ititle">Title</label>          
+              <input type="text" class="form-control" id="ititle" placeholder="Mr.">
+            </div>
+          </div>
+          
+          <div class="col-md-5">
+            <div class="form-group">
+              <label for="ifname">First name</label>          
+              <input type="text" class="form-control" id="ifname" placeholder="Chee Kin">
+            </div>        
+          </div>
+          
+          <div class="col-md-5">
+            <div class="form-group">
+              <label for="ilname">Last name</label>          
+              <input type="text" class="form-control" id="ilname" placeholder="Lin">
+            </div>       
+          </div>                    
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="selGender">Gender</label>
+              <select class="form-control" id="selGender" placeholder=" ">
+                <option>M</option>
+                <option>F</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="dBirth">Birth Date</label>
+              <input type="date" class="form-control" id="dBirth" placeholder="dd/mm/yyyy">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" class="address" placeholder="Street">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" class="form-control" class="address" placeholder="City">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" class="form-control" class="address" placeholder="State">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="integer" class="form-control" class="address" placeholder="Post Code">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <select class="form-control" class="address">
+                <option>to mare</option>
+                <option>omo</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr class="col-md-12">
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-3 pull-right" >
+              <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Well, here you should put the rest of the stuff -->
+        
+      </form>
+    
+    </div>
+
+  </body>
+</html>
