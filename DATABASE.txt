@@ -293,7 +293,7 @@ FOREIGN KEY (ID_CREATOR) REFERENCES USERS (ID)
 );
 
 INSERT INTO USERS(ID, FIRSTNAME, LASTNAME, USERNAME, USER_TYPE, EMAIL, PASSWORD)
-VALUES (1,'Gianmaria', 'Moro', 'Hàsh','M', 'gianmaria.moro@studenti.unitn.it', 'ciao1'),
+VALUES (1,'Gianmaria', 'Moro', 'Hash','M', 'gianmaria.moro@studenti.unitn.it', 'ciao1'),
 (2,'Leonardo', 'Cristini', 'YoungGano','M', 'leonardo.cristini@studenti.unitn.it', 'ciao2'),
 (3,'Mario', 'Rossi', 'EaterKing','U', 'mario.rossi@hotmail.it', 'ciao3'),
 (4,'Luca', 'Panarozzolo', 'Eddy420RistoMan','R', 'pizzanapoli@hotmail.it', 'ciao4'),
@@ -319,8 +319,8 @@ VALUES(1, 46.06941967, 11.12015963, 'Via Roma 3'),
 (3, 46.06483428, 11.12334609, 'Via S.Croce 8');
 
 INSERT INTO RESTAURANTS
-VALUES(1, 'Bella Napoli', 'Pizza napoletana di qualità con cottura a legna', 'www.pizzanapoli.it', 4,4,4,1),
-(2, 'Cinese Party', 'Cucina cinese cucinata da un vero chef cinese qualificato alla scuola più difficile di Pechino', 'www.cineseparty.com', 3,5,5,3);
+VALUES(1, 'Bella Napoli', 'Pizza napoletana di qualitÃ  con cottura a legna', 'www.pizzanapoli.it', 4,4,4,1),
+(2, 'Cinese Party', 'Cucina cinese cucinata da un vero chef cinese qualificato alla scuola piÃ¹ difficile di Pechino', 'www.cineseparty.com', 3,5,5,3);
 
 INSERT INTO OPENING_HOURS_RANGES
 VALUES(1, 3, '9:00:00', '23:30:00'),
