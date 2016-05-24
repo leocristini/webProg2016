@@ -3,6 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+ 
+/* TODO:
+ * - ALL the queries methods should be in this class;
+ * - insertUser(User user) method to sign up a new user (insert the user in the DB);
+ * - loadRestaurants() method to query DB for the restaurant list (based on search filters);
+ * - MANY MORE QUERY METHODS.
+ */
+ 
 package db_classes;
 
 import java.io.Serializable;
@@ -72,11 +80,9 @@ public class DBManager implements Serializable {
                     return null;
                 }
             } finally{
-                //Ricordarsi SEMPRE di chiudere i ResultSet in un blocco finally
                 rs.close();
             }
         } finally{
-            //Ricordarsi SEMPRE di chiudere i PreparedStatement in un blocco finally
             stm.close();
         }
     }
