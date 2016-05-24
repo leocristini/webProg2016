@@ -59,8 +59,8 @@ TODO:
                         </p>
                         <p class="fieldset">
                             <label class="image-replace cd-password" for="signin-password">Password</label>
-                            <input class="full-width has-padding has-border" id="signin-password" type="text" name="password" placeholder="Password">
-                            <a href="#0" class="hide-password">Hide</a>
+                            <input class="full-width has-padding has-border" id="signin-password" type="password" name="password" placeholder="Password">
+                            <a href="#0" class="hide-password">Show</a>
                             <span class="cd-error-message">Error message here!</span>
                         </p>
                         <p class="fieldset">
