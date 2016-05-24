@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
         //controllo nel DB se esiste un utente con lo stesso username + password
         User user = null;
         try {
-
+            //metodo della classe DBManager per effettuare authentication
             user = manager.authenticate(username, password);
 
         } catch (SQLException ex) {
