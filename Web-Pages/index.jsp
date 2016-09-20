@@ -1,3 +1,9 @@
+<%-- 
+    Document   : index
+    Created on : 17-mag-2016, 15.57.44
+    Author     : gianma
+--%>
+
 <!--
 
 TODO: 
@@ -12,6 +18,11 @@ TODO:
 
 <html>
     <head>
+        <%!User userin; %>
+        <%!String fullname; %>
+        <%@page import="db_classes.User" %>
+        <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        <%--<jsp:useBean id="user" scope="session" class="db_classes.User"/>--%>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -28,18 +39,30 @@ TODO:
     	<nav class="navbar navbar-custom">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.jsp">
                         <!-- TODO : mettere logo-->
 		       	<img alt="Brand" src="...">
                     </a>
 		</div>
+
+                <c:if test="${sessionScope.user == null}">
                 <nav class="main-nav">
                     <ul>
                     <!-- inser more links here -->
 			<li><a class="cd-signin" href="#0">Sign in</a></li>
 			<li><a class="cd-signup" href="#0">Sign up</a></li>
                     </ul>
-		</nav>
+		</nav>     
+                </c:if>
+                <c:if test="${sessionScope.user != null}">
+                    <form class="navbar-form navbar-right" action="LogoutServlet" method="GET">
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>    
+                    <p class="navbar-text navbar-right">Signed in as 
+                        <a href="#" class="navbar-ling"> <c:out value="${sessionScope.user.firstname}"></c:out></a>
+                    </p>
+                </c:if>
+                    
             </div>
     	</nav>
         
@@ -54,7 +77,7 @@ TODO:
                     <form class="cd-form" action="LoginServlet" method="POST">
                         <p class="fieldset">
                             <label class="image-replace cd-email" for="signin-email">E-mail</label>
-                            <input class="full-width has-padding has-border" id="signin-email" type="email" name="username" placeholder="E-mail / Username">
+                            <input class="full-width has-padding has-border" id="signin-email" type="text" name="username" placeholder="E-mail / Username">
                             <span class="cd-error-message">Error message here!</span>
                         </p>
                         <p class="fieldset">
@@ -147,12 +170,13 @@ TODO:
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="media/js/main.js"></script> <!-- Gem jQuery -->
         
+                    
         <!-- questo mostra il campo di ricerca -->
         <div class="jumbotron">
             <div class="container">
                 <h1>Find the best restourant</h1>
                 <!-- 
-                Questo form Ã¨ quello che manda alla servlet che maneggia tutto
+                Questo form è quello che manda alla servlet che maneggia tutto
                 il luogo da cercare e il ristorante
                 id Luogo == location
                 id ristorante == 
@@ -179,3 +203,4 @@ TODO:
         
     </body>
 </html>
+
