@@ -2,6 +2,10 @@
 	background-color: rgb(255, 127, 80);
 	color: rgb(255, 127, 80);
 }
+
+p{
+    color: #292a34;
+}
 /* -------------------------------- 
 
 Primary style
@@ -96,7 +100,7 @@ header[role=banner]::after {
   margin-right: 5%;
   width: 44px;
   height: 100%;
-  background: url("../img/cd-icon-menu.svg") no-repeat center center;
+  background: url("../images/cd-icon-menu.svg") no-repeat center center;
   cursor: pointer;
 }
 .main-nav ul {
@@ -474,7 +478,7 @@ xsigin/signup popup
   height: 40px;
   right: 0;
   top: -40px;
-  background: url("../img/cd-icon-close.svg") no-repeat center center;
+  background: url("../images/cd-icon-close.svg") no-repeat center center;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
