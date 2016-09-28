@@ -1,9 +1,10 @@
 <%-- 
-    Document   : index
-    Created on : 26-set-2016, 13.03.08
+    Document   : login_page
+    Created on : 28-set-2016, 14.27.53
     Author     : gianma
 --%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,8 +25,8 @@
         <nav id="nav-lato">
             <c:if test="${sessionScope.user == null}">
                 <ul class="menu">
-                    <li><a href="index.jsp">Home</a></li>
-                    <li><a href="login_page.jsp">Sign in</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sign in</a></li>
                     <li><a href="#">Sign up</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">About</a></li>
@@ -35,14 +36,14 @@
             <c:if test="${sessionScope.user != null}">
                 <ul class="menu">
                     <li>Welcome back <c:out value="${sessionScope.user.firstname}"></c:out></li>
-                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">My profile</a></li>
                     <li><a href="#">My notifications</a></li>
                     <li><a href="#">My restaurants</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="<%=request.getContextPath()%>/LogoutServlet">Logout</a></li>
+                    <li><a href="#">Logout</a></li>
                 </ul>
             </c:if>
         </nav>
@@ -71,13 +72,40 @@
         </nav>
         
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="jumbotron">
-                    <!-- qui ci si piazza la mappa centrata sulla pos + i ristoranti vicini  -->
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="container-fluid">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-heading">Login</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form action="LoginServlet" method="POST">
+                            <div class="container-fluid">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="username">Username:</label>
+                                        <input type="text" id="username" name="username" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" id="pwd" name="password" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <button class="btn btn-primary" type="submit">Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-2"></div>
+            </div>
+            <div class="col-md-4"></div>
         </div>
         <script src="media/js/jquery-3.1.1.min.js"></script>
         <script src="media/js/scripts.js"></script>
