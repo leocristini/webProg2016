@@ -10,8 +10,6 @@ USERNAME VARCHAR(25) NOT NULL UNIQUE,
 
 USER_TYPE VARCHAR(5) DEFAULT 'A',
 
-EMAIL VARCHAR(254) NOT NULL,
-
 PASSWORD VARCHAR(255) NOT NULL,
 
 PRIMARY KEY (ID),
@@ -292,12 +290,12 @@ FOREIGN KEY (ID_CREATOR) REFERENCES USERS (ID)
 
 );
 
-INSERT INTO USERS(ID, FIRSTNAME, LASTNAME, USERNAME, USER_TYPE, EMAIL, PASSWORD)
-VALUES (1,'Gianmaria', 'Moro', 'Hash','M', 'gianmaria.moro@studenti.unitn.it', 'ciao1'),
-(2,'Leonardo', 'Cristini', 'YoungGano','M', 'leonardo.cristini@studenti.unitn.it', 'ciao2'),
-(3,'Mario', 'Rossi', 'EaterKing','U', 'mario.rossi@hotmail.it', 'ciao3'),
-(4,'Luca', 'Panarozzolo', 'Eddy420RistoMan','R', 'pizzanapoli@hotmail.it', 'ciao4'),
-(5,'Wu', 'Tang', 'CineseKing','R', 'cineseparty@hotmail.it', 'ciao5');
+INSERT INTO USERS(ID, FIRSTNAME, LASTNAME, USERNAME, USER_TYPE, PASSWORD)
+VALUES (1,'Gianmaria', 'Moro', 'gianmaria.moro@studenti.unitn.it' ,'M', 'ciao1'),
+(2,'Leonardo', 'Cristini', 'leonardo.cristini@studenti.unitn.it','M',  'ciao2'),
+(3,'Mario', 'Rossi', 'mario.rossi@hotmail.it','U',  'ciao3'),
+(4,'Luca', 'Panarozzolo', 'pizzanapoli@hotmail.it', 'R', 'ciao4'),
+(5,'Wu', 'Tang', 'cineseparty@hotmail.it','R',  'ciao5');
 
 INSERT INTO CUISINES(ID, NAME)
 VALUES(1 ,'Pizzeria'),
