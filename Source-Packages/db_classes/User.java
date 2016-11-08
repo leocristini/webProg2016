@@ -13,11 +13,10 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
     
-    private String username;
-    private String email;
-    private String firstname;
-    private String lastname;
-    private String usertype;
+    private String username = null;
+    private String firstname = null;
+    private String lastname = null;
+    private String usertype = null;
 
     /**
      * @return the username
@@ -31,20 +30,6 @@ public class User implements Serializable {
      */
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    /**
-     * @return the email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     /**
